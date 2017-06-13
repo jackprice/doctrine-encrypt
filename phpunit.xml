@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        backupStaticAttributes="false"
+
+        cacheTokens="false"
+        colors="false"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        forceCoversAnnotation="false"
+        mapTestClassNameToCoveredClassName="false"
+        printerClass="PHPUnit_TextUI_ResultPrinter"
+
+        strict="false"
+        verbose="false"
+        
+        bootstrap="vendor/autoload.php"
+>
+
+    <testsuites>
+        <testsuite name="Test Suite">
+            <directory>test</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src/</directory>
+        </whitelist>
+    </filter>
+</phpunit>
